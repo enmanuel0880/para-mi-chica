@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para mi amor ❤️ - San Valentín 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Sacramento&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      color: #333;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 0;
+      animation: float 10s infinite linear;
+      opacity: 0;
+    }
+
+    .heart::before {
+      content: attr(data-emoji);
+      font-size: inherit;
+      display: block;
+      text-shadow: 0 0 12px rgba(231,76,60,0.85);
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(110vh) translateX(0) rotate(0deg); opacity: 0; }
+      20%  { opacity: 0.92; }
+      100% { transform: translateY(-170px) translateX(-30px) rotate(900deg); opacity: 0; }
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 50px 25px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 30px;
+      box-shadow: 0 15px 60px rgba(0,0,0,0.18),
+                  inset 0 0 30px rgba(255,182,193,0.4);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,182,193,0.45);
+      z-index: 10;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3.5em, 10vw, 5em);
+      color: #c0392b;
+      margin: 0 0 0.4em;
+      text-shadow: 5px 5px 25px rgba(192,57,43,0.6);
+      animation: glow 4s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 5px 5px 25px rgba(192,57,43,0.6); }
+      to   { text-shadow: 9px 9px 40px rgba(192,57,43,0.9); }
+    }
+
+    .mensaje {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(1.4em, 4.5vw, 1.8em);
+      line-height: 1.8;
+      margin: 40px 0;
+      color: #b71c1c;  /* Color sólido rosado oscuro para que se vea siempre */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .mensaje p {
+      margin: 25px 0;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 1.5s forwards;
+      animation-delay: calc(0.6s * var(--order));
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .firma {
+      font-family: 'Sacramento', cursive;
+      font-size: clamp(2.5em, 7vw, 3.5em);
+      color: #c0392b;
+      margin-top: 60px;
+      font-style: italic;
+      text-shadow: 3px 3px 15px rgba(192,57,43,0.5);
+    }
+
+    .firma::after {
+      content: "💖";
+      font-size: 1.5em;
+      margin-left: 15px;
+      animation: beat-heart 1.6s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @keyframes beat-heart {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.45); }
+    }
+
+    .gif-container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .gif-container img {
+      max-width: 280px;
+      height: auto;
+      border-radius: 25px;
+      box-shadow: 0 12px 35px rgba(192,57,43,0.3);
+      border: 3px solid rgba(255,182,193,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container { padding: 45px 25px; border-radius: 30px; }
+      h1 { font-size: 3.8em; }
+      .mensaje { font-size: 1.6em; }
+      .firma { font-size: 3em; }
+      .gif-container img { max-width: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <div class="container">
+    <h1>¡Feliz San Valentín, mi amor! ❤️😍💕</h1>
+
+    <div class="mensaje">
+      <p style="--order:1">Desde el primer día que te conocí 😊💫✨, supe que eras especial 🥰💖. Cada momento contigo es especial y mágico 💝🌸🥹.</p>
+      <p style="--order:2">Gracias por hacerme tan feliz todos los días ❤️😘🤗💞🌹. Hoy y siempre, quiero estar a tu lado para siempre 💕😭.</p>
+      <p style="--order:3">¿Quieres seguir siendo mi San Valentín... para siempre? 💍💖💞😘</p>
+    </div>
+
+    <div class="firma">
+      Con todo mi amor,<br>
+      Enmanuel 🌹💖😘💕
+    </div>
+
+    <!-- GIF romántico que aparece -->
+    <div class="gif-container">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWw1YTVzeXlhMWx1cnB3YWR4aTlqMGoxdXJ2Zm9mY3IxanhyMDRraiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvYNSqBAMDVx8CEYkt/giphy.gif" alt="Corazón latiendo con rosas y amor 💞">
+    </div>
+  </div>
+
+  <script>
+    const emojis = ['❤️', '💖', '💕', '💗', '🫶', '💘', '🌸', '🌹', '💞', '😘'];
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.setAttribute('data-emoji', emojis[Math.floor(Math.random() * emojis.length)]);
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 8 + 8) + 's';
+      heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 15000);
+    }
+
+    setInterval(createHeart, Math.random() * 350 + 250);
+  </script>
+
+</body>
+</html>
